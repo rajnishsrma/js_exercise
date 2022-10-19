@@ -1,0 +1,13 @@
+{
+  "name": "js_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node 1.js",
+    "chalu" : "node 2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
