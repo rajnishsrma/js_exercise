@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Promises</h2>
-    <script>
+    <!-- <script>
         //Promise
 
         console.log("start")
@@ -28,7 +28,7 @@
 
            let promise =  new Promise((resolve , reject) => {  // arrow function is callback function
                // resolve and reject is the functions
-               resolve
+               resolve()
             });
 
            return promise ;
@@ -46,6 +46,36 @@
 
     console.log("end")
 
+    </script> -->
+
+    <script>
+        console.log("start")
+        function voteables(age){
+
+            let promise = new Promise( (resolve, reject)=>{
+            if(age>=18){
+                setTimeout(()=>{
+                    resolve("you can vote");
+                }, 2500)
+            }else{
+                setTimeout(()=>{
+                    reject("you can not vote");
+                }, 2500)          
+            }
+        }); 
+          return promise;
+        }
+        
+        let canvote = voteables(22);
+        console.log(canvote)
+        canvote.then((data)=>{
+            console.log(data);
+        })
+    .catch((err)=>{
+        console.log(err);
+    })
+
+    console.log("end")
     </script>
 </body>
 </html>
