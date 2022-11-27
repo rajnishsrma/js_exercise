@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Promises</h2>
+    <script>
+        //Promise
+
+        console.log("start")
+
+
+        function canVote(age){ // age is parameter // fuction defination or function declaration
+            // age is like a local variable.
+            // if(!age){ // age = undefined  // undefined == false
+            //     return "please pass the value of age"
+            // }
+
+            // if(age > 18){
+            //     return "you can vote" ;
+            // }else{
+            //     return "you can not vote" ;
+            // }
+
+           let promise =  new Promise((resolve , reject) => {  // arrow function is callback function
+               // resolve and reject is the functions
+               resolve
+            });
+
+           return promise ;
+
+        }
+
+    let result =  canVote(0); // 10 is argument // function calling
+
+    result.then(()=>{
+        console.log("fullfilled success")
+    })
+    .catch(()=>{
+        console.log("rejected failure")
+    })
+
+    console.log("end")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Home {
+            constructor(){
+               // alert("constructor called..");
+                this.age = 50 ;
+            }
+
+            college = "GEC" ;
+            id = "DC234" ;
+
+            getId(id){
+              this.id = id ; 
+            }
+
+        }
+
+        class House extends Home  {
+            constructor(){
+                super();
+              //  alert("house constructor called ..");
+            }
+        }
+
+        let home = new Home(); 
+
+        let house = new House();
+
+        house.getId( "CHILD!@")
+
+
+        console.log(home.id);
+        console.log(house.id);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
